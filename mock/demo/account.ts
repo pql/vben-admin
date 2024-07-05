@@ -65,9 +65,7 @@ export default [
     method: 'post',
     statusCode: 200,
     response: () => {
-      return resultError('Token Expired!', {
-        code: ResultEnum.TIMEOUT as number,
-      });
+      return resultError('Token Expired!', { code: ResultEnum.TIMEOUT as number });
     },
   },
 ] as MockMethod[];

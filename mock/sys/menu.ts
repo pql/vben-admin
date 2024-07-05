@@ -221,11 +221,11 @@ const linkRoute = {
       name: 'Doc',
       meta: {
         title: 'routes.demo.iframe.doc',
-        frameSrc: 'https://vvbin.cn/doc-next/',
+        frameSrc: 'https://doc.vvbin.cn/',
       },
     },
     {
-      path: 'https://vvbin.cn/doc-next/',
+      path: 'https://doc.vvbin.cn/',
       name: 'DocExternal',
       component: 'LAYOUT',
       meta: {
@@ -240,8 +240,8 @@ export default [
     url: '/basic-api/getMenuList',
     timeout: 1000,
     method: 'get',
-    response: ({ headers }) => {
-      const token = getRequestToken({ headers } as requestParams);
+    response: (request: requestParams) => {
+      const token = getRequestToken(request);
       if (!token) {
         return resultError('Invalid token!');
       }
@@ -267,4 +267,4 @@ export default [
       return resultSuccess(menu);
     },
   },
-] as MockMethod[];
+] as unknown as MockMethod[];
