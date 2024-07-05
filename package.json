@@ -32,7 +32,7 @@
     "lint:prettier": "prettier --write .",
     "lint:stylelint": "stylelint \"**/*.{vue,css,less,scss}\" --fix --cache --cache-location node_modules/.cache/stylelint/",
     "log": "conventional-changelog -p angular -i CHANGELOG.md -s",
-    "prepare": "husky install",
+    "prepare": "husky",
     "preview": "npm run build && vite preview",
     "reinstall": "rimraf pnpm-lock.yaml && rimraf package.lock.json && rimraf node_modules && npm run bootstrap",
     "serve": "npm run dev",
